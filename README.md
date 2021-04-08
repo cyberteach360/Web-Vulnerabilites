@@ -7,7 +7,7 @@
 
 ### What is OS Command Injection ?
 
-OS Command Injection is server side  web vulnerablities where attacker execute :eyes:" system command"  like id, whoami ,unamem etc os command  .
+OS Command Injection is server side  web vulnerablities where attacker execute :eyes:" system command"  like id, whoami ,uname etc os command  .
 It is a web vulnerability that allows an attacker to take advantage of that made system call to execute operating system commands on the server.
 
 
@@ -23,12 +23,12 @@ It is a web vulnerability that allows an attacker to take advantage of that made
 ### Active OS Command Injection :
 
 
-Active command injection will return the response to the user.  It can be made visible through several HTML elements. That means when a attacker execute :eyes: "system command "  like ls ,server will return result of ls .(Attacker will se the result of ls ) .It is so easy to execute . 
+Active command injection will return the response to the user.  It can be made visible through several HTML elements. That means when a attacker execute :eyes: "system command "  like ls ,server will return result of ls .(Attacker will see the result of ls ) .It is so easy to execute . 
 
 
 ### Blind OS Command Injection :
       
-Blind command injection occurs when the system command made to the server does not return the response to the user in the HTML document . That means when a  attacker execute " system command "  like ls ,server will not return result of ls but  server execute ls command . For  , seeing the result of :eyes: "system command " you must upload reverse shell on target / victim server . After ,uploaded  reverse shell on victim server , you must be  listen uploades shell on attacker terminal using nc command . 
+Blind command injection occurs when the system command made to the server does not return the response to the user in the HTML document . That means when a  attacker execute " system command "  like ls ,server will not return result of ls but  server execute ls command . For  , seeing the result of :eyes: "system command " you must upload reverse shell on target / victim server . After uploading  reverse shell on victim server , you must be  listen uploaded shell on attacker terminal using nc command . 
 
 
 ### Example :
@@ -42,9 +42,9 @@ Blind command injection occurs when the system command made to the server does n
 
 Note : 
            
-       1. Change ip according your local host ip
+       1. Change ip according to your local host ip
         
-       2. One can easily  upload shell if OS command injection is occured .
+       2. One can easily  uploaded  shell if OS command injection is occured .
               
 
 # 🥈2. Sqlite3 or "flat-file" :
