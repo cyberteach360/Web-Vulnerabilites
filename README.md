@@ -3,7 +3,7 @@
 
 
 
-## 🥇1. OS Command Injection :
+## 🥇01. OS Command Injection :
 
 ### What is OS Command Injection ?
 
@@ -47,7 +47,7 @@ Note :
        2. One can easily  uploaded  shell if OS command injection is occured .
               
 
-# 🥈2. Sqlite3 or "flat-file" :
+# 🥈02. Sqlite3 or "flat-file" :
 
 When databases stored as a file it's called "flat-file"  .The extension of those file is db . ( like webapp.db , base.db )
 
@@ -71,7 +71,7 @@ Use Of Sqlite3 :
                       select * from table_name ;  // see more //
                       
                 
-# 🥉3. XML OR XML External Entity OR XXE :
+# 🥉03. XML OR XML External Entity OR XXE :
 
 An XML External Entity (XXE) attack is a vulnerability that abuses features of XML parsers/data.
 
@@ -125,7 +125,7 @@ If we use this payload then a website vulnerable to XXE(normally) would display 
 In a similar manner, we can use this kind of payload to read other files but a lot of times you can fail to read files in this manner or the reason for failure could be the file you are trying to read.
 
 
-# 🔊4.Broken Access -IDOR :
+# 🔊04.Broken Access -IDOR :
 
 ###### IDOR, or Insecure Direct Object Reference, is the act of exploiting a misconfiguration in the way user input is handled, to access resources you wouldn't ordinarily be able to access. IDOR is a type of access control vulnerability.
 
@@ -136,3 +136,37 @@ There is however a potentially huge problem here, a hacker may be able to change
 
 ### 👁️ Conclusion of IDOR : When  you change the value of (get /post) parameter  , you will see other user information .
 
+
+
+# 🧚‍♂️05. Components With Known Vulnerabilities :
+
+* Occasionally, you may find that the company/entity that you're pen-testing is using a program that already has a well documented vulnerability.
+
+* For example, let's say that a company hasn't updated their version of WordPress for a few years, and using a tool such as wpscan, you find that it's version 4.6. Some quick research will reveal that WordPress 4.6 is vulnerable to an unauthenticated remote code execution(RCE) exploit, and even better you can find an exploit already made on exploit-db.
+
+
+Process :
+
+           1. Analize target website and  findout version , name etc of target platform .
+
+           2. Then , checkout those versuon ,name are vulnerable or not  via exploit db ,rapid7  etc .
+
+           3. If target webiste version is vulnerable  you can easily hacked your targer website via those process .
+
+#### Example :
+
+Suppose  , Our  target website   like this :
+
+
+After analyzing  , we realize that  our target  website create by "Nostromo"  .  Ok  , thats great  .Now ,follow our previous process :
+
+1. Search  "Nostromo" on exploit db 
+
+2. find out specific exploitation according to our target version (Here  , nostromo 1.9.6 )
+
+3. Then , Download exploit file and  execute it
+
+#### Command :
+          download_file.py target_url  id 
+
+Here , you can use any linux os command instead of id 
