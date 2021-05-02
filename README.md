@@ -167,8 +167,7 @@ Process :
 Suppose  , Our  target website   like this :
 
 
-![116019462_282530606501791_5738413798267894160_n](https://user-images.githubusercontent.com/55437834/116801663-a977a280-ab2d-11eb-9b3d-b002ec8099e5.png)
-
+![bSuhuhp](https://user-images.githubusercontent.com/55437834/116803690-c024f600-ab3b-11eb-99ad-270fef1d027a.png)
 
 After analyzing  , we realize that  our target  website create by "Nostromo"  .  Ok  , thats great  .Now ,follow our previous process :
 
