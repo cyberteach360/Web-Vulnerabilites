@@ -180,7 +180,7 @@ After analyzing  , we realize that  our target  website create by "Nostromo"  . 
 
 Here , you can use any linux os command instead of id 
 
-# 🐞 SSRF(Sever Side Request Forgery ) :
+# 🐞 06. SSRF(Sever Side Request Forgery ) :
 
 ![server-side-request-forgery-vulnerability-ssrf](https://user-images.githubusercontent.com/55437834/116801458-070aef80-ab2c-11eb-8860-23590d56bd1a.jpg)
 
