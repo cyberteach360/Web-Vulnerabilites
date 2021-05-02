@@ -71,7 +71,7 @@ Use Of Sqlite3 :
 
                       .schema table_name
 
-                      select * from table_name ;  // see more //
+                      select * from table_name ;  // see more using sqlite3 command//
                       
                 
 # 🥉03. XML OR XML External Entity OR XXE :
@@ -106,7 +106,7 @@ An XML External Entity (XXE) attack is a vulnerability that abuses features of X
 
 Now we'll see some XXE payload and see how they are working.
 
-1) The first payload we'll see is very simple. If you've read the previous task properly then you'll understand this payload very easily.
+1) The first payload we'll see is very simple. If you have  basic knowledge about XML language you can easily understand it :
 
          <!DOCTYPE replace [<!ENTITY name "feast"> ]>
          <userInfo>
@@ -165,6 +165,9 @@ Process :
 #### Example :
 
 Suppose  , Our  target website   like this :
+
+
+![116019462_282530606501791_5738413798267894160_n](https://user-images.githubusercontent.com/55437834/116801663-a977a280-ab2d-11eb-9b3d-b002ec8099e5.png)
 
 
 After analyzing  , we realize that  our target  website create by "Nostromo"  .  Ok  , thats great  .Now ,follow our previous process :
