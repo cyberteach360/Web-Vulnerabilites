@@ -169,4 +169,78 @@ After analyzing  , we realize that  our target  website create by "Nostromo"  . 
 #### Command :
           download_file.py target_url  id 
 
-Here , you can use any linux os command instead of id 
+Here , you can use any linux os command instead of id
+
+# 🐞 SSRF(Sever Side Request Forgery ) :
+
+![server-side-request-forgery-vulnerability-ssrf](https://user-images.githubusercontent.com/55437834/116801458-070aef80-ab2c-11eb-8860-23590d56bd1a.jpg)
+
+
+### What is SSRF ?
+#### Server-side request forgery (also known as SSRF) is a web security vulnerability that allows an attacker to induce the server-side application to make HTTP requests to an arbitrary domain of the attacker's choosing .
+
+#### Simply , SSRF is a web vulnerability which help an attacker to get / gain information from target server . Attacker  can gain any  Data from Sever  for that It's called Server Side Request Forgery .
+
+## What is the impact of SSRF attacks?
+
+1. Attacker can unauthorized action or access
+2. Attacke can see any data of server
+3. Attacker can execute 3rd party mallicious website
+
+## 👽 How One Can  Find SSRF :
+
+Step 1 :
+        At first findout any get parameter that is use for data loaded ( Like url,data,id  )
+Suppose , you have this website http://ptc-b59f8e4f-a516ccb2.libcurl.so/ 
+
+After  , recon you find get parameter of this website http://ptc-b59f8e4f-a516ccb2.libcurl.so/?url
+
+Now , you can test LFI, RFI And SSRF on this  website 
+
+Step 2:
+       Use loopback ip after target url and use port number
+       
+      http://ptc-b59f8e4f-a516ccb2.libcurl.so/?url=http://127.0.0.1:1234
+      
+You will see information of 1234 port 
+
+##### 👀 Note : Developer can whitelist and blacklist for our input 
+
+## 🔥 Bypassing SSRF Protection :
+
+There are two main types of SSRF protection mechanisms out there:
+                                                    
+                                                    blacklists and
+                                                    whitelists
+
+Blacklists refer to the practice of not allowing certain addresses and blocking the request if a blacklisted address was received as input. Most SSRF protection takes the form of blacklisting internal network address blocks.
+      
+      
+On the other hand, whitelists mean that a server would only allow through requests that contain URLs on a prespecified list and fail all other requests
+
+### 📷 Bypassing Blacklists :
+                      1.Try using IPv6 addresses instead of IPv4
+                      2.Use Hex Encoding instead of Decimal number (http://0x7f.0x0.0x0.0x1)
+                      3.Use Octal Encoding insted of Decimal number (http://0177.0.0.01)
+                      4.Use Dword Encodinf( http://2130706433)
+                      5.Use URL Encoding (%6c%6f%63%61%6c%68%6f%73%74)
+                      6.Use Mixed Encoding (0177.0.0.0x1)
+                      7.Tricking it with DNS
+                      8.Fooling it with redirects
+                      9.Use localhost instead of 127.0.01 (http://localhost:1234)
+                      
+#### Practice Website Link :
+                       
+                       level 1:http://ptc-e5e344a9-ab23ba80.libcurl.so/?url=https://assets.pentesterlab.com/hacker.txt
+                       level 2:http://ptc-a04fcdce-f9f12764.libcurl.so/?url=https://assets.pentesterlab.com/hacker.txt
+                       level 3:http://ptc-b59f8e4f-a516ccb2.libcurl.so/?url=https://assets.pentesterlab.com/hacker.txt
+                       level 4:http://ptc-50a250d6-842795bb.libcurl.so/?url=https://assets.pentesterlab.com/hacker.txt
+                       
+#### Resoures Link :
+               
+               1.https://portswigger.net/web-security/ssrf ( Theory about SSRF)
+               2.https://vickieli.medium.com/bypassing-ssrf-protection-e111ae70727b (Bypass )
+               3.https://pravinponnusamy.medium.com/ssrf-payloads-f09b2a86a8b4    (Bypass Payload List )
+                        
+### 😍Happy Hacking 😍
+
